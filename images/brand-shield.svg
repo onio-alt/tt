@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="gold-main" x1="18" y1="10" x2="110" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE49B"/>
+      <stop offset="0.45" stop-color="#E1A93F"/>
+      <stop offset="1" stop-color="#A86F21"/>
+    </linearGradient>
+    <linearGradient id="gold-soft" x1="22" y1="18" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD57E"/>
+      <stop offset="1" stop-color="#BD7E2B"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="47" y1="44" x2="81" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7BF5FF"/>
+      <stop offset="1" stop-color="#18AFC7"/>
+    </linearGradient>
+    <clipPath id="inner-shield">
+      <path d="M64 30L98 45V65C98 86.5 84.8 102.6 64 112C43.2 102.6 30 86.5 30 65V45L64 30Z"/>
+    </clipPath>
+  </defs>
+
+  <path d="M64 6L109 25V63C109 93.7 90.1 114.7 64 124C37.9 114.7 19 93.7 19 63V25L64 6Z" fill="url(#gold-main)"/>
+  <path d="M64 11L103 28V62C103 89.2 86.8 106.5 64 115C41.2 106.5 25 89.2 25 62V28L64 11Z" fill="#050C16" stroke="url(#gold-soft)" stroke-width="2.4"/>
+
+  <rect x="34" y="24" width="60" height="7.5" rx="1.8" fill="url(#gold-main)"/>
+  <path d="M64 17L68 24H60L64 17Z" fill="url(#gold-main)"/>
+  <path d="M64 30L69 39H59L64 30Z" fill="url(#gold-main)"/>
+  <path d="M64 31L66.8 42H61.2L64 31Z" fill="#C8872B"/>
+  <path d="M61.8 42H66.2L70.6 86H57.4L61.8 42Z" fill="url(#gold-main)"/>
+  <path d="M64 111L59 102H69L64 111Z" fill="url(#gold-main)"/>
+
+  <g clip-path="url(#inner-shield)">
+    <rect x="30" y="30" width="68" height="84" fill="#091525"/>
+    <path d="M46 28H56V118H46Z" fill="url(#cyan)" opacity="0.95"/>
+    <path d="M60 28H68V118H60Z" fill="url(#cyan)" opacity="0.88"/>
+    <path d="M72 28H80V118H72Z" fill="url(#cyan)" opacity="0.8"/>
+    <g stroke="#E8E8E8" stroke-width="1.15" stroke-linecap="round" opacity="0.7">
+      <path d="M39 44h2M39 50h2M39 56h2M39 62h2M39 68h2M39 74h2M39 80h2M39 86h2"/>
+      <path d="M87 46h2M87 52h2M87 58h2M87 64h2M87 70h2M87 76h2M87 82h2M87 88h2"/>
+    </g>
+  </g>
+
+  <path d="M64 30L98 45V65C98 86.5 84.8 102.6 64 112C43.2 102.6 30 86.5 30 65V45L64 30Z" stroke="url(#gold-main)" stroke-width="2.8"/>
+  <path d="M64 20L70 26L64 32L58 26L64 20Z" fill="#E2A84B"/>
+  <circle cx="64" cy="26" r="2.2" fill="#8F5D22"/>
+</svg>

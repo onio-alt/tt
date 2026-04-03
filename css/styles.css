@@ -1,0 +1,277 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    background: url('images/653.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+nav {
+    background-color: #0000FF;  /* Dark blue background */
+    padding: 15px 20px;
+    border: 5px solid #0000FF;  /* Blue border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: px;  /* Add a margin to the top */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;  /* White text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    color: #0000FF;  /* Change hover text color to dark blue */
+    border-radius: 5px;
+}
+
+.container {
+    padding: 70px;
+    background-color: rgba(75, 0, 130, 0.8);  /* Dark Indigo color with opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full-width image */
+img {
+    width: 100%; /* Makes the image span the full width */
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2em;
+    color: #87CEEB;
+    border-bottom: 2px solid #87CEEB;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f7f7f7;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+footer {
+    background-color: #87CEEB;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+.form-section {
+    padding: 40px;
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #0066cc;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 32%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+	 resize: none; /* Отключаем возможность масштабировать поле */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.btn-submit {
+    background-color: #0066cc;
+    color: white;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #004d99;
+}
+
+.form-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.steps-section {
+    background: rgba(30, 144, 255, 0.9);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px; /* Закругленные углы */
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    max-width: 1200px; /* Ограничение ширины */
+}
+
+.steps-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.step .number {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffd700; /* Золотистый */
+}
+
+.step h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.step p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #f0f8ff;
+}

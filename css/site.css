@@ -17,6 +17,9 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -81,10 +84,14 @@ a {
 
 .brand {
     flex: 1;
+    min-width: 0;
     font-size: 17px;
     line-height: 1.15;
     font-weight: 500;
     color: #1f2737;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 main {
@@ -465,7 +472,7 @@ main {
 
 .case-card h3 {
     margin: 0 0 8px;
-    font-size: 33px;
+    font-size: clamp(28px, 8.4vw, 33px);
     line-height: 1.12;
     font-weight: 500;
 }
@@ -480,6 +487,7 @@ main {
 .meta-row {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 12px;
     padding-top: 8px;
     border-top: 1px solid #c2c9d4;
@@ -487,9 +495,19 @@ main {
     font-size: 12px;
 }
 
+.meta-row span {
+    min-width: 0;
+}
+
+.meta-row span:first-child {
+    flex: 0 1 46%;
+}
+
 .meta-row span:last-child {
+    flex: 1 1 54%;
     text-align: right;
     color: #2b3649;
+    overflow-wrap: anywhere;
 }
 
 .faq-item {
@@ -839,6 +857,7 @@ body.menu-open .drawer-backdrop {
     width: 100%;
     border-collapse: collapse;
     margin-top: 8px;
+    table-layout: fixed;
 }
 
 .prices-table th,
@@ -866,8 +885,32 @@ body.menu-open .drawer-backdrop {
 .prices-table td:last-child {
     width: 34%;
     text-align: left;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     padding-left: 10px;
+}
+
+.section h2,
+.doc-title,
+.help-group h3,
+.expert-name,
+.info-title,
+.adv-heading,
+.timeline-item h3,
+.object-card h3,
+.case-card h3,
+.faq-question,
+.site-footer h2,
+.site-footer h3,
+.price-block h3,
+.drawer-title,
+.drawer-nav a,
+.contact-line a,
+.footer-legal,
+.prices-table th,
+.prices-table td,
+.meta-row span {
+    overflow-wrap: anywhere;
 }
 
 .price-block + .price-block {

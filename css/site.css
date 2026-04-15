@@ -40,13 +40,17 @@ a {
     max-width: 420px;
     min-height: 100vh;
     margin: 0 auto;
+    padding-top: calc(56px + env(safe-area-inset-top));
     background: var(--page-bg);
 }
 
 .topbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 70;
+    padding-top: env(safe-area-inset-top);
     background: #f2f3f5;
     border-bottom: 1px solid #c4ccd8;
     box-shadow: 0 2px 6px rgba(8, 18, 42, 0.2);
@@ -941,6 +945,7 @@ body.menu-open .drawer-backdrop {
 @media (min-width: 992px) {
     .site-shell {
         max-width: 1180px;
+        padding-top: calc(62px + env(safe-area-inset-top));
         box-shadow: 0 0 0 1px #c8cfda inset;
     }
 

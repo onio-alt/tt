@@ -20,6 +20,8 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -106,7 +108,7 @@ main {
 
 .hero h1 {
     margin: 0 0 18px;
-    font-size: clamp(42px, 12.5vw, 58px);
+    font-size: clamp(38px, 11.5vw, 52px);
     line-height: 1.07;
     letter-spacing: -0.01em;
     font-weight: 500;
@@ -182,10 +184,15 @@ main {
 
 .section h2 {
     margin: 0 0 16px;
-    font-size: clamp(40px, 11vw, 54px);
+    font-size: clamp(34px, 9.2vw, 44px);
     line-height: 1.08;
     letter-spacing: -0.01em;
     font-weight: 500;
+}
+
+#research-types h2 {
+    font-size: clamp(30px, 8.2vw, 40px);
+    line-height: 1.1;
 }
 
 .doc-item {
@@ -201,7 +208,7 @@ main {
     align-items: center;
     gap: 8px;
     margin-bottom: 7px;
-    font-size: 33px;
+    font-size: clamp(24px, 6.4vw, 30px);
     line-height: 1.12;
     font-weight: 500;
     color: #1f2a3d;
@@ -233,7 +240,7 @@ main {
 
 .help-group h3 {
     margin: 0 0 8px;
-    font-size: 34px;
+    font-size: clamp(24px, 6.8vw, 30px);
     line-height: 1.15;
     font-weight: 500;
 }
@@ -274,7 +281,7 @@ main {
 
 .expert-name {
     margin: 0;
-    font-size: 41px;
+    font-size: clamp(30px, 8vw, 36px);
     line-height: 1.15;
     font-weight: 500;
 }
@@ -291,7 +298,7 @@ main {
 
 .info-title {
     margin: 8px 0 6px;
-    font-size: 30px;
+    font-size: clamp(22px, 6.2vw, 28px);
     line-height: 1.15;
     font-weight: 500;
 }
@@ -359,7 +366,7 @@ main {
     align-items: center;
     gap: 8px;
     margin-bottom: 6px;
-    font-size: 31px;
+    font-size: clamp(24px, 6.8vw, 29px);
     line-height: 1.15;
     font-weight: 500;
 }
@@ -411,7 +418,7 @@ main {
 
 .timeline-item h3 {
     margin: 0 0 6px;
-    font-size: 27px;
+    font-size: clamp(21px, 5.8vw, 25px);
     line-height: 1.25;
     font-weight: 500;
 }
@@ -446,7 +453,7 @@ main {
 
 .object-card h3 {
     margin: 10px 0 8px;
-    font-size: 33px;
+    font-size: clamp(24px, 6.8vw, 30px);
     line-height: 1.12;
     font-weight: 500;
 }
@@ -472,7 +479,7 @@ main {
 
 .case-card h3 {
     margin: 0 0 8px;
-    font-size: clamp(28px, 8.4vw, 33px);
+    font-size: clamp(23px, 6.4vw, 29px);
     line-height: 1.12;
     font-weight: 500;
 }
@@ -529,7 +536,7 @@ main {
     background: transparent;
     color: inherit;
     text-align: left;
-    font-size: 25px;
+    font-size: clamp(20px, 5.8vw, 24px);
     line-height: 1.2;
     font-weight: 500;
     cursor: pointer;
@@ -727,13 +734,13 @@ main {
 
 .drawer-nav {
     display: grid;
-    gap: 20px;
-    padding: 24px 34px;
+    gap: 16px;
+    padding: 22px 24px;
 }
 
 .drawer-nav a {
     text-decoration: none;
-    font-size: 39px;
+    font-size: 24px;
     line-height: 1.1;
     font-weight: 400;
     color: #1f2739;
@@ -760,14 +767,14 @@ body.menu-open .drawer-backdrop {
 
 .site-footer h2 {
     margin: 0 0 18px;
-    font-size: 45px;
+    font-size: clamp(32px, 8.2vw, 38px);
     line-height: 1.1;
     font-weight: 500;
 }
 
 .site-footer h3 {
     margin: 0 0 10px;
-    font-size: 34px;
+    font-size: clamp(24px, 6.6vw, 30px);
     line-height: 1.12;
     font-weight: 500;
 }
@@ -781,7 +788,7 @@ body.menu-open .drawer-backdrop {
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
 }
 
@@ -869,14 +876,14 @@ body.menu-open .drawer-backdrop {
 
 .prices-table th {
     text-align: left;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 1.15;
     font-weight: 500;
     color: #1c2538;
 }
 
 .prices-table td {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.45;
     color: #2c3649;
 }
@@ -919,7 +926,7 @@ body.menu-open .drawer-backdrop {
 
 .price-block h3 {
     margin: 0 0 8px;
-    font-size: 36px;
+    font-size: clamp(28px, 7vw, 34px);
     line-height: 1.18;
     font-weight: 500;
 }
@@ -952,7 +959,7 @@ body.menu-open .drawer-backdrop {
     }
 
     .hero h1 {
-        font-size: clamp(52px, 6vw, 72px);
+        font-size: clamp(46px, 4.8vw, 64px);
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
@@ -974,7 +981,7 @@ body.menu-open .drawer-backdrop {
     }
 
     .activity-item {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .section {
@@ -982,7 +989,51 @@ body.menu-open .drawer-backdrop {
     }
 
     .section h2 {
-        font-size: clamp(44px, 5vw, 62px);
+        font-size: clamp(38px, 3.6vw, 50px);
+    }
+
+    #research-types h2 {
+        font-size: clamp(34px, 3.2vw, 44px);
+    }
+
+    .doc-title {
+        font-size: clamp(26px, 2.6vw, 34px);
+    }
+
+    .help-group h3 {
+        font-size: clamp(26px, 2.6vw, 34px);
+    }
+
+    .expert-name {
+        font-size: clamp(34px, 3vw, 44px);
+    }
+
+    .info-title {
+        font-size: clamp(24px, 2.3vw, 31px);
+    }
+
+    .adv-heading {
+        font-size: clamp(24px, 2.3vw, 30px);
+    }
+
+    .timeline-item h3 {
+        font-size: clamp(22px, 2.1vw, 28px);
+    }
+
+    .object-card h3 {
+        font-size: clamp(24px, 2.3vw, 31px);
+    }
+
+    .case-card h3 {
+        font-size: clamp(24px, 2.3vw, 31px);
+    }
+
+    .faq-question {
+        font-size: clamp(21px, 2vw, 27px);
+    }
+
+    .price-block h3 {
+        font-size: clamp(30px, 2.8vw, 40px);
     }
 
     .object-grid {
@@ -1004,7 +1055,11 @@ body.menu-open .drawer-backdrop {
     }
 
     .site-footer h2 {
-        font-size: clamp(44px, 5vw, 62px);
+        font-size: clamp(36px, 3.2vw, 46px);
+    }
+
+    .site-footer h3 {
+        font-size: clamp(28px, 2.4vw, 36px);
     }
 
     .footer-columns {
@@ -1021,6 +1076,3 @@ body.menu-open .drawer-backdrop {
         bottom: 20px;
     }
 }
-    .drawer-nav a {
-        font-size: 24px;
-    }

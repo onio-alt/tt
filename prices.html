@@ -1,35 +1,171 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стоимость исследований | Экспертная практика</title>
-    <meta name="description" content="Стоимость компьютерно-технических и лингвистических исследований, консультация и подача заявки.">
+    <meta name="description" content="Стоимость компьютерно-технических, лингвистических, товароведческих, инженерно-технических и иных исследований.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/site.css">
+
+    <style>
+        .prices-hero-note {
+            margin: 14px 0 0;
+            max-width: 860px;
+            color: #475569;
+        }
+
+        .price-block {
+            margin-top: 24px;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        .price-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .price-title i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .price-title h3 {
+            margin: 0;
+        }
+
+        .price-block p {
+            margin: 0 0 18px;
+            color: #475569;
+        }
+
+        .prices-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #fff;
+        }
+
+        .prices-table thead th {
+            text-align: left;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 18px;
+            font-size: 15px;
+        }
+
+        .prices-table tbody td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+            color: #0f172a;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .prices-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-cost,
+        .price-term {
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .individual-note {
+            margin-top: 24px;
+            padding: 24px;
+            border-radius: 24px;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        .individual-note .note-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .individual-note .note-head i {
+            font-size: 22px;
+        }
+
+        .individual-note h3 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .individual-note p {
+            margin: 0;
+            color: rgba(248, 250, 252, 0.92);
+        }
+
+        @media (max-width: 900px) {
+            .price-block {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .prices-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .prices-table thead th,
+            .prices-table tbody td {
+                padding: 14px 14px;
+                font-size: 14px;
+            }
+
+            .price-title i {
+                width: 38px;
+                height: 38px;
+                border-radius: 12px;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
     <aside class="drawer" id="drawer" aria-label="Основное меню">
         <div class="drawer-head">
             <button class="icon-btn" id="closeMenu" type="button" aria-label="Закрыть меню">
-                <i class="fa-solid fa-xmark"></i>
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
-            <div class="drawer-title">Стрелков | Экспертная практика</div>
+            <div class="drawer-title">Экспертная практика<br>Стрелков</div>
         </div>
         <nav class="drawer-nav">
-            <a href="index.html#research-types">Виды исследований</a>
-            <a href="prices.html">Стоимость</a>
-            <a href="index.html#help-conclusion">Помощь заключения</a>
-            <a href="index.html#about">Об эксперте</a>
+            <a href="index.html#research-types">Заключения</a>
+            <a href="index.html#about">Эксперт</a>
             <a href="index.html#advantages">Преимущества</a>
-            <a href="index.html#stages">Этапы исследования</a>
-            <a href="index.html#objects">Объекты исследований</a>
-            <a href="index.html#cases">Примеры экспертиз</a>
+            <a href="index.html#stages">Этапы</a>
+            <a href="index.html#objects">Объекты</a>
+            <a href="index.html#cases">Примеры</a>
+            <a href="prices.html">Стоимость</a>
             <a href="index.html#faq">Вопросы и ответы</a>
             <a href="#contacts-footer">Контакты</a>
         </nav>
@@ -37,12 +173,43 @@
 
     <header class="topbar">
         <div class="topbar-inner">
-            <button class="icon-btn" id="openMenu" type="button" aria-label="Открыть меню">
-                <i class="fa-solid fa-bars"></i>
+            <button class="icon-btn menu-btn" id="openMenu" type="button" aria-label="Открыть меню">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
             </button>
-            <div class="brand">Стрелков | Экспертная практика</div>
-            <a class="icon-btn" href="tel:+79266100903" aria-label="Позвонить">
-                <i class="fa-solid fa-phone"></i>
+
+            <div class="brand">
+                <span class="brand-mobile">Экспертная практика<br>Стрелков</span>
+                <span class="brand-desktop">Экспертная практика<br>Стрелков</span>
+            </div>
+
+            <nav class="topbar-nav" aria-label="Основная навигация">
+                <a href="index.html#research-types">Заключения</a>
+                <a href="index.html#about">Эксперт</a>
+                <a href="index.html#advantages">Преимущества</a>
+                <a href="index.html#stages">Этапы</a>
+                <a href="index.html#objects">Объекты</a>
+                <a href="prices.html">Стоимость</a>
+                <a href="#contacts-footer">Контакты</a>
+            </nav>
+
+            <div class="topbar-contact">
+                <a class="topbar-mail" href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a>
+                <div class="topbar-phone-row">
+                    <a class="topbar-phone" href="tel:+79266100903">+7 (926) 610-09-03</a>
+                    <a class="topbar-social social-whatsapp" href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a class="topbar-social social-telegram" href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <i class="bi bi-telegram" aria-hidden="true"></i>
+                    </a>
+                    <a class="topbar-social social-max" href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX">
+                        <i class="bi bi-chat-fill" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <a class="icon-btn call-btn" href="tel:+79266100903" aria-label="Позвонить">
+                <span class="material-symbols-outlined" aria-hidden="true">call</span>
             </a>
         </div>
     </header>
@@ -51,110 +218,250 @@
         <main>
             <section class="section section-surface">
                 <h2>Стоимость исследований</h2>
+                <p class="prices-hero-note">
+                    Ниже приведены ориентировочные виды исследований, базовая стоимость и минимальные сроки проведения.
+                    Итоговая стоимость зависит от объёма материалов, количества объектов, поставленных вопросов и сложности исследования.
+                </p>
 
                 <article class="price-block">
-                    <h3>Компьютерно-техническая экспертиза</h3>
+                    <div class="price-title">
+                        <i class="bi bi-pc-display-horizontal" aria-hidden="true"></i>
+                        <h3>Компьютерно-техническая экспертиза</h3>
+                    </div>
                     <p>Исследование компьютеров, серверов, мобильных устройств, облачных сервисов, файловых систем, логов, переписки и интернет-ресурсов.</p>
                     <table class="prices-table">
                         <thead>
                             <tr>
-                                <th>Услуга</th>
+                                <th>Наименование услуги</th>
                                 <th>Стоимость</th>
+                                <th>Срок проведения</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Экспертиза отдельного компьютера / ноутбука</td>
-                                <td>от 20 000 руб.</td>
+                                <td class="price-cost">от 20 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза мобильного устройства (смартфон, планшет)</td>
-                                <td>от 25 000 руб.</td>
+                                <td class="price-cost">от 25 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
                             </tr>
                             <tr>
-                                <td>Экспертиза переписки в мессенджерах и соцсетях (1-3 диалога)</td>
-                                <td>от 25 000 руб.</td>
+                                <td>Экспертиза переписки в мессенджерах и соцсетях (1–3 диалога)</td>
+                                <td class="price-cost">от 25 000 руб.</td>
+                                <td class="price-term">от 4 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза облачного хранилища / Dropbox / Google Drive и др.</td>
-                                <td>от 40 000 руб.</td>
+                                <td class="price-cost">от 40 000 руб.</td>
+                                <td class="price-term">от 7 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза сайта, фиксация и анализ контента</td>
-                                <td>от 30 000 руб.</td>
+                                <td class="price-cost">от 30 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза метаданных файлов, времени создания и изменения</td>
-                                <td>от 20 000 руб.</td>
+                                <td class="price-cost">от 20 000 руб.</td>
+                                <td class="price-term">от 4 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза базы данных / информационной системы</td>
-                                <td>от 60 000 руб.</td>
+                                <td class="price-cost">от 60 000 руб.</td>
+                                <td class="price-term">от 10 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза программного обеспечения / исходного кода</td>
-                                <td>от 70 000 руб.</td>
+                                <td class="price-cost">от 70 000 руб.</td>
+                                <td class="price-term">от 12 рабочих дней</td>
                             </tr>
                         </tbody>
                     </table>
                 </article>
 
                 <article class="price-block">
-                    <h3>Лингвистическая экспертиза</h3>
+                    <div class="price-title">
+                        <i class="bi bi-chat-square-text" aria-hidden="true"></i>
+                        <h3>Лингвистическая экспертиза</h3>
+                    </div>
                     <p>Анализ текстов, публикаций, постов, интервью и переписки на предмет наличия оскорблений, клеветы, дискредитации, угроз и иных юридически значимых признаков.</p>
                     <table class="prices-table">
                         <thead>
                             <tr>
-                                <th>Услуга</th>
+                                <th>Наименование услуги</th>
                                 <th>Стоимость</th>
+                                <th>Срок проведения</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Анализ одного спорного текста / публикации</td>
-                                <td>от 25 000 руб.</td>
+                                <td class="price-cost">от 25 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза серии публикаций (до 10 текстов)</td>
-                                <td>от 45 000 руб.</td>
+                                <td class="price-cost">от 45 000 руб.</td>
+                                <td class="price-term">от 8 рабочих дней</td>
                             </tr>
                             <tr>
                                 <td>Экспертиза переписки (чат, e-mail), до 100 сообщений</td>
-                                <td>от 30 000 руб.</td>
+                                <td class="price-cost">от 30 000 руб.</td>
+                                <td class="price-term">от 6 рабочих дней</td>
+                            </tr>
+                            <tr>
+                                <td>Лингвистический анализ договора / соглашения</td>
+                                <td class="price-cost">от 35 000 руб.</td>
+                                <td class="price-term">от 7 рабочих дней</td>
                             </tr>
                         </tbody>
                     </table>
                 </article>
 
                 <article class="price-block">
-                    <h3>Лингвистическая экспертиза</h3>
-                    <p>Анализ текстов, публикаций, постов, интервью и переписки на предмет наличия оскорблений, клеветы, дискредитации, угроз и иных юридически значимых признаков.</p>
+                    <div class="price-title">
+                        <i class="bi bi-box-seam" aria-hidden="true"></i>
+                        <h3>Товароведческая экспертиза</h3>
+                    </div>
+                    <p>Определение наличия и характера дефектов товара, причин их возникновения, степени утраты потребительских свойств и размера материального ущерба.</p>
                     <table class="prices-table">
                         <thead>
                             <tr>
-                                <th>Услуга</th>
+                                <th>Наименование услуги</th>
                                 <th>Стоимость</th>
+                                <th>Срок проведения</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Анализ одного спорного текста / публикации</td>
-                                <td>от 25 000 руб.</td>
+                                <td>Экспертиза одного товара (бытовая техника, электроника и т.п.)</td>
+                                <td class="price-cost">от 20 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
                             </tr>
                             <tr>
-                                <td>Экспертиза серии публикаций (до 10 текстов)</td>
-                                <td>от 45 000 руб.</td>
+                                <td>Экспертиза партии однородных товаров (до 10 позиций)</td>
+                                <td class="price-cost">от 40 000 руб.</td>
+                                <td class="price-term">от 7 рабочих дней</td>
                             </tr>
                             <tr>
-                                <td>Экспертиза переписки (чат, e-mail), до 100 сообщений</td>
-                                <td>от 30 000 руб.</td>
+                                <td>Определение стоимости ущерба / утраты потребительских свойств</td>
+                                <td class="price-cost">от 25 000 руб.</td>
+                                <td class="price-term">от 6 рабочих дней</td>
                             </tr>
                         </tbody>
                     </table>
                 </article>
+
+
+                <article class="price-block">
+                    <div class="price-title">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                        <h3>Экспертиза объектов интеллектуальной собственности</h3>
+                    </div>
+                    <p>Анализ произведений, программного обеспечения, брендов и иных объектов ИС на предмет оригинальности, заимствований и нарушения исключительных прав.</p>
+                    <table class="prices-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование услуги</th>
+                                <th>Стоимость</th>
+                                <th>Срок проведения</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Экспертиза одного произведения (текст, дизайн, сайт и др.)</td>
+                                <td class="price-cost">от 40 000 руб.</td>
+                                <td class="price-term">от 10 рабочих дней</td>
+                            </tr>
+                            <tr>
+                                <td>Сравнительный анализ двух произведений на предмет заимствований</td>
+                                <td class="price-cost">от 55 000 руб.</td>
+                                <td class="price-term">от 12 рабочих дней</td>
+                            </tr>
+                            <tr>
+                                <td>Экспертиза программного продукта как объекта ИС</td>
+                                <td class="price-cost">от 70 000 руб.</td>
+                                <td class="price-term">от 14 рабочих дней</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="price-block">
+                    <div class="price-title">
+                        <i class="bi bi-journal-text" aria-hidden="true"></i>
+                        <h3>Рецензии на экспертные заключения</h3>
+                    </div>
+                    <p>Профессиональная оценка уже выполненных экспертиз: проверка методики, выводов, полноты исследования и соответствия заключения законодательству и методикам.</p>
+                    <table class="prices-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование услуги</th>
+                                <th>Стоимость</th>
+                                <th>Срок проведения</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Рецензия на одно экспертное заключение / отчёт</td>
+                                <td class="price-cost">от 25 000 руб.</td>
+                                <td class="price-term">от 5 рабочих дней</td>
+                            </tr>
+                            <tr>
+                                <td>Рецензия с подготовкой вопросов в суд / ходатайства</td>
+                                <td class="price-cost">от 35 000 руб.</td>
+                                <td class="price-term">от 7 рабочих дней</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="price-block">
+                    <div class="price-title">
+                        <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+                        <h3>Экспертиза контрактов и договорной документации</h3>
+                    </div>
+                    <p>Анализ контрактов, ТЗ, актов и отчётов с технической и фактической точки зрения: соответствие условиям, объёмам работ, срокам и фактическому исполнению.</p>
+                    <table class="prices-table">
+                        <thead>
+                            <tr>
+                                <th>Наименование услуги</th>
+                                <th>Стоимость</th>
+                                <th>Срок проведения</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Техническая экспертиза одного договора / контракта</td>
+                                <td class="price-cost">от 30 000 руб.</td>
+                                <td class="price-term">от 7 рабочих дней</td>
+                            </tr>
+                            <tr>
+                                <td>Экспертиза комплекта документов (договор + ТЗ + акты)</td>
+                                <td class="price-cost">от 50 000 руб.</td>
+                                <td class="price-term">от 10 рабочих дней</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <section class="individual-note" aria-label="Индивидуальный расчет стоимости">
+                    <div class="note-head">
+                        <i class="bi bi-stars" aria-hidden="true"></i>
+                        <h3>Крупные и комплексные исследования</h3>
+                    </div>
+                    <p>
+                        По крупным, многоэпизодным и комплексным исследованиям стоимость и срок проведения
+                        определяются индивидуально после ознакомления с материалами, объёмом объектов исследования,
+                        количеством вопросов и поставленными задачами.
+                    </p>
+                </section>
             </section>
 
-            <section class="section section-surface" id="contacts">
+            <section class="section section-light" id="contacts">
                 <div class="contact-card">
                     <h2>Остались вопросы?</h2>
                     <p>Отправьте Ваш запрос и получите бесплатную консультацию от эксперта</p>
@@ -188,50 +495,57 @@
         </main>
 
         <footer class="site-footer" id="contacts-footer">
-            <h2>Экспертная практика<br>Стрелкова</h2>
+            <h2>Экспертная практика<br>Стрелков</h2>
 
-            <div class="footer-contacts">
-                <h3>Контакты</h3>
-                <div class="contact-line"><i class="fa-solid fa-phone"></i><a href="tel:+79266100903">+7 (926) 610-09-03</a></div>
-                <div class="contact-line"><i class="fa-regular fa-envelope"></i><a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a></div>
-                <p class="footer-text">Режим работы: пн-пт, с 12:00 до 20:00</p>
-            </div>
+            <div class="footer-grid">
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <div class="contact-line phone"><span class="material-symbols-outlined" aria-hidden="true">call</span><a href="tel:+79266100903">+7 (926) 610-09-03</a></div>
+                    <div class="contact-line email"><span class="material-symbols-outlined" aria-hidden="true">mail</span><a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a></div>
+                    <p class="footer-text">Режим работы: с понедельника по пятницу с 12:00 до 20:00</p>
+                </div>
 
-            <div class="messengers">
-                <a href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-                <a href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>Telegram</a>
-                <a href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX"><i class="fa-solid fa-circle-dot"></i>MAX</a>
-            </div>
+                <div class="messengers">
+                    <a class="messenger-link messenger-whatsapp" href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+                    <a class="messenger-link messenger-telegram" href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram" aria-hidden="true"></i><span>Telegram</span></a>
+                    <a class="messenger-link messenger-max" href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX"><i class="bi bi-chat-fill" aria-hidden="true"></i><span>MAX</span></a>
+                </div>
 
-            <div class="footer-menu">
-                <h3>Меню</h3>
-                <a href="index.html#research-types">Виды документов</a>
-                <a href="prices.html">Стоимость</a>
-                <a href="index.html#help-conclusion">Помощь заключения</a>
-                <a href="index.html#about">Об эксперте</a>
-                <a href="index.html#advantages">Преимущества</a>
-                <a href="index.html#stages">Этапы исследования</a>
-                <a href="index.html#objects">Объекты исследований</a>
-                <a href="index.html#cases">Примеры экспертиз</a>
-                <a href="index.html#faq">Вопросы и ответы</a>
-                <a href="#contacts-footer">Контакты</a>
+                <div class="footer-menu">
+                    <h3>Меню</h3>
+                    <a href="index.html#research-types">Заключения</a>
+                    <a href="index.html#about">Эксперт</a>
+                    <a href="index.html#advantages">Преимущества</a>
+                    <a href="index.html#stages">Этапы</a>
+                    <a href="index.html#objects">Объекты</a>
+                    <a href="index.html#cases">Примеры</a>
+                    <a href="prices.html">Стоимость</a>
+                    <a href="index.html#faq">Вопросы и ответы</a>
+                    <a href="#contacts-footer">Контакты</a>
+                </div>
             </div>
 
             <hr class="footer-rule">
-            <p class="footer-legal">© 2024-2026 г. <a href="privacy.html">Политика конфиденциальности</a></p>
-            <p class="footer-legal">ИП Стрелков Родион Александрович<br>ИНН 091706875564<br>ОГРНИП 325010000032740</p>
+            <div class="footer-legal-row">
+                <p class="footer-legal">© 2024-2026 г. <a href="privacy.html">Политика конфиденциальности</a></p>
+                <p class="footer-legal footer-legal-company">ИП Стрелков Родион Александрович ИНН 091706875564 ОГРНИП 325010000032740</p>
+            </div>
         </footer>
     </div>
 
     <div class="floating-actions" aria-label="Быстрые действия">
-        <a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы." data-mail-fallback="#contacts-footer" aria-label="Написать на почту"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#contacts" aria-label="Открыть форму"><i class="fa-regular fa-message"></i></a>
+        <a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы." data-mail-fallback="#contacts-footer" aria-label="Написать на почту">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        </a>
+        <a href="#contacts" aria-label="Открыть форму">
+            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+        </a>
     </div>
+
     <button class="scroll-top-btn" type="button" data-scroll-top aria-label="Наверх">
-        <i class="fa-solid fa-arrow-up"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
     </button>
 
     <script src="js/site.js"></script>
 </body>
 </html>
-

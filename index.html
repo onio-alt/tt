@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
@@ -17,19 +17,18 @@
     <aside class="drawer" id="drawer" aria-label="Основное меню">
         <div class="drawer-head">
             <button class="icon-btn" id="closeMenu" type="button" aria-label="Закрыть меню">
-                <i class="fa-solid fa-xmark"></i>
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
-            <div class="drawer-title">Стрелков | Экспертная практика</div>
+            <div class="drawer-title">Экспертная практика<br>Стрелков</div>
         </div>
         <nav class="drawer-nav">
-            <a href="#research-types">Виды исследований</a>
-            <a href="prices.html">Стоимость</a>
-            <a href="#help-conclusion">Помощь заключения</a>
-            <a href="#about">Об эксперте</a>
+            <a href="#research-types">Заключения</a>
+            <a href="#about">Эксперт</a>
             <a href="#advantages">Преимущества</a>
-            <a href="#stages">Этапы исследования</a>
-            <a href="#objects">Объекты исследований</a>
-            <a href="#cases">Примеры экспертиз</a>
+            <a href="#stages">Этапы</a>
+            <a href="#objects">Объекты</a>
+            <a href="#cases">Примеры</a>
+            <a href="prices.html">Стоимость</a>
             <a href="#faq">Вопросы и ответы</a>
             <a href="#contacts-footer">Контакты</a>
         </nav>
@@ -37,45 +36,106 @@
 
     <header class="topbar">
         <div class="topbar-inner">
-            <button class="icon-btn" id="openMenu" type="button" aria-label="Открыть меню">
-                <i class="fa-solid fa-bars"></i>
+            <button class="icon-btn menu-btn" id="openMenu" type="button" aria-label="Открыть меню">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
             </button>
-            <div class="brand">Стрелков | Экспертная практика</div>
-            <a class="icon-btn" href="tel:+79266100903" aria-label="Позвонить">
-                <i class="fa-solid fa-phone"></i>
+            <div class="brand">
+                <span class="brand-mobile">Экспертная практика<br>Стрелков</span>
+				<span class="brand-desktop">
+				<span class="brand-desktop-top">Экспертная практика</span>
+				<span class="brand-desktop-bottom">Стрелков</span>
+				</span>
+            </div>
+            <nav class="topbar-nav" aria-label="Основная навигация">
+                <a href="#research-types">Заключения</a>
+                <a href="#about">Эксперт</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#stages">Этапы</a>
+                <a href="#objects">Объекты</a>
+                <a href="prices.html">Стоимость</a>
+                <a href="#contacts-footer">Контакты</a>
+            </nav>
+            <div class="topbar-contact">
+                <a class="topbar-mail" href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a>
+                <div class="topbar-phone-row">
+                    <a class="topbar-phone" href="tel:+79266100903">+7 (926) 610-09-03</a>
+                    <a class="topbar-social social-whatsapp" href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a class="topbar-social social-telegram" href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <i class="bi bi-telegram" aria-hidden="true"></i>
+                    </a>
+                    <a class="topbar-social social-max" href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX">
+                        <i class="bi bi-chat-fill" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <a class="icon-btn call-btn" href="tel:+79266100903" aria-label="Позвонить">
+                <span class="material-symbols-outlined" aria-hidden="true">call</span>
             </a>
         </div>
     </header>
 
     <div class="site-shell">
         <main>
-            <section class="hero">
-                <h1>Компьютерно-техническая экспертиза</h1>
-                <p>Выполнение экспертиз любой сложности, проведение исследований, рецензирование сторонних заключений и исследований, бесплатные консультирование по вопросам компьютерно-технической экспертизы.</p>
-                <a href="#contacts" class="pill-btn">Получить консультацию</a>
+            <section class="hero-block">
+                <div class="hero-content">
+                    <h1>
+                        <span class="hero-title-mobile">Компьютерно-техническая экспертиза</span>
+                        <span class="hero-title-desktop">Компьютерно-<br>техническая<br>экспертиза</span>
+                    </h1>
+                    <p>
+                        <span class="hero-text-mobile">Выполнение экспертиз любой сложности, проведение исследований, рецензирование сторонних заключений и исследований, бесплатное консультирование по вопросам компьютерно-технической экспертизы.</span>
+                        <span class="hero-text-desktop">Выполнение независимой досудебной и судебной экспертизы любой сложности, рецензирование.</span>
+                    </p>
+                    <a href="#contacts" class="pill-btn">Получить консультацию</a>
+                </div>
+                <img class="hero-image" src="images/fingerprint.jpg" alt="Отпечаток пальца на цифровой плате">
             </section>
 
-            <img class="hero-image" src="images/fingerprint.jpg" alt="Отпечаток пальца на цифровой плате">
-
             <div class="activity-bar">
-                <div class="activity-item"><i class="fa-regular fa-square-check"></i>Правовая корректность</div>
-                <div class="activity-item"><i class="fa-solid fa-gear"></i>Современные методы исследования</div>
-                <div class="activity-item"><i class="fa-solid fa-landmark"></i>Заключения принимаются судами</div>
+                <div class="activity-item activity-desktop-only">
+                    <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+                    <span>Работа с экспертом без посредников</span>
+                </div>
+                <div class="activity-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+                    <span>Правовая корректность заключений</span>
+                </div>
+                <div class="activity-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">memory</span>
+                    <span>Современные методы исследований</span>
+                </div>
+                <div class="activity-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">account_balance</span>
+                    <span>Заключения принимаются судами</span>
+                </div>
             </div>
 
             <section class="section section-surface" id="research-types">
-                <h2>Документы, подготавливаемые по результатам исследований</h2>
-                <div class="doc-item">
-                    <div class="doc-title"><i class="fa-solid fa-arrow-right"></i>Досудебное заключение</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                </div>
-                <div class="doc-item">
-                    <div class="doc-title"><i class="fa-solid fa-arrow-right"></i>Судебное заключение</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                </div>
-                <div class="doc-item">
-                    <div class="doc-title"><i class="fa-solid fa-arrow-right"></i>Рецензия на заключение</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                <h2>Заключения, подготавливаемые по результатам исследований</h2>
+                <div class="doc-list">
+                    <div class="doc-item">
+                        <div class="doc-title">
+                            <span class="material-symbols-outlined" aria-hidden="true">east</span>
+                            <span>Досудебное заключение</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </div>
+                    <div class="doc-item">
+                        <div class="doc-title">
+                            <span class="material-symbols-outlined" aria-hidden="true">east</span>
+                            <span>Судебное заключение</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </div>
+                    <div class="doc-item">
+                        <div class="doc-title">
+                            <span class="material-symbols-outlined" aria-hidden="true">east</span>
+                            <span>Рецензия на заключение</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </div>
                 </div>
                 <div class="button-wrap">
                     <a href="#contacts" class="pill-btn">Заказать исследование</a>
@@ -84,81 +144,123 @@
 
             <section class="section section-light" id="help-conclusion">
                 <h2>Заключение поможет</h2>
-                <div class="help-group">
-                    <h3>Частным лицам</h3>
-                    <ul>
-                        <li>фиксация цифровых доказательств</li>
-                        <li>защита интересов в суде</li>
-                    </ul>
-                </div>
-                <div class="help-group">
-                    <h3>Адвокатам и юристам</h3>
-                    <ul>
-                        <li>подготовка независимых заключений</li>
-                        <li>рецензирование экспертиз</li>
-                        <li>участие в судебных заседаниях</li>
-                    </ul>
-                </div>
-                <div class="help-group">
-                    <h3>Организациям и бизнесу</h3>
-                    <ul>
-                        <li>расследование цифровых инцидентов</li>
-                        <li>анализ действий сотрудников и контрагентов</li>
-                        <li>подготовка доказательной базы</li>
-                    </ul>
+                <div class="help-list">
+                    <article class="help-group">
+                        <h3>Частным лицам</h3>
+                        <ul>
+                            <li>фиксация цифровых доказательств</li>
+                            <li>защита интересов в суде</li>
+                        </ul>
+                    </article>
+                    <article class="help-group">
+                        <h3>Адвокатам и юристам</h3>
+                        <ul>
+                            <li>подготовка независимых заключений</li>
+                            <li>рецензирование экспертиз</li>
+                            <li>участие в судебных заседаниях</li>
+                        </ul>
+                    </article>
+                    <article class="help-group">
+                        <h3>Организациям и бизнесу</h3>
+                        <ul>
+                            <li>расследование цифровых инцидентов</li>
+                            <li>анализ действий сотрудников и контрагентов</li>
+                            <li>подготовка доказательной базы</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
 
-            <section class="section section-surface" id="about">
-                <div class="section-icon"><i class="fa-regular fa-clipboard"></i></div>
+            <section class="section section-light" id="about">
+                <div class="section-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">badge</span>
+                </div>
                 <h2>Сведения об эксперте</h2>
                 <div class="expert-card">
-                    <img class="expert-photo" src="images/expert-photo.jpg" alt="Родион Александрович Стрелков">
-                    <h3 class="expert-name">Родион Александрович<br>Стрелков</h3>
-                    <p class="expert-role">Независимый судебный эксперт</p>
-                    <a href="#contacts" class="pill-btn expert-btn">Написать эксперту</a>
+                    <div class="expert-main">
+                        <img class="expert-photo" src="images/expert-photo.jpg" alt="Родион Александрович Стрелков">
+                        <h3 class="expert-name">Родион Александрович Стрелков</h3>
+                        <p class="expert-role">Независимый судебный эксперт</p>
+                        <a href="#contacts" class="pill-btn expert-btn">Написать эксперту</a>
+                    </div>
 
-                    <h3 class="info-title"><i class="fa-solid fa-graduation-cap"></i> Образование</h3>
-                    <p class="info-text">Высшее образование МГТУ им. Баумана. Специальность: «Судебная экспертиза». Квалификация: «Судебный эксперт».</p>
+                    <div class="expert-details">
+                        <section class="expert-info-block">
+                            <h3 class="info-title">
+                                <span class="icon-circle" aria-hidden="true"><span class="material-symbols-outlined">school</span></span>
+                                <span>Образование</span>
+                            </h3>
+                            <p class="info-text">Высшее образование МГТУ им. Баумана. Специальность: «Судебная экспертиза». Квалификация: «Судебный эксперт».</p>
+                        </section>
 
-                    <h3 class="info-title">Профессиональный опыт</h3>
-                    <p class="info-text">Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                        <section class="expert-info-block">
+                            <h3 class="info-title">
+                                <span>Профессиональный опыт</span>
+                            </h3>
+                            <p class="info-text">Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                        </section>
 
-                    <h3 class="info-title">Документы и сертификаты</h3>
-                    <div class="documents-slider">
-                        <div class="slider-track" data-slider-track>
-                            <img src="images/doc-1.jpg" alt="Документ 1">
-                            <img src="images/doc-2.jpg" alt="Документ 2">
-                            <img src="images/doc-3.jpg" alt="Документ 3">
-                            <img src="images/99.jpg" alt="Документ 4">
-                        </div>
-                        <div class="slider-dots">
-                            <span class="active" data-slider-dot></span>
-                            <span data-slider-dot></span>
-                            <span data-slider-dot></span>
-                            <span data-slider-dot></span>
-                        </div>
+                        <section class="expert-info-block">
+                            <h3 class="info-title">
+                                <span>Документы и сертификаты</span>
+                            </h3>
+                            <div class="documents-slider">
+                                <div class="slider-track" data-slider-track>
+                                    <img src="images/doc-1.jpg" alt="Документ 1">
+                                    <img src="images/doc-2.jpg" alt="Документ 2">
+                                    <img src="images/doc-3.jpg" alt="Документ 3">
+                                    <img src="images/99.jpg" alt="Документ 4">
+                                </div>
+                                <div class="slider-dots">
+                                    <span class="active" data-slider-dot></span>
+                                    <span data-slider-dot></span>
+                                    <span data-slider-dot></span>
+                                    <span data-slider-dot></span>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
 
-            <section class="section section-light" id="advantages">
+            <section class="section section-surface" id="advantages">
                 <h2>Почему выбирают меня?</h2>
-                <div class="adv-item">
-                    <div class="adv-heading"><i class="fa-regular fa-square-check"></i>Процессуальная корректность</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-heading"><i class="fa-solid fa-landmark"></i>Судебная практика</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-heading"><i class="fa-solid fa-gear"></i>Современные методики</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                </div>
-                <div class="adv-item">
-                    <div class="adv-heading"><i class="fa-solid fa-globe"></i>Работа по всей России</div>
-                    <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                <div class="adv-grid">
+                    <article class="adv-item">
+                        <div class="adv-heading">
+                            <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+                            <span>Процессуальная корректность</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </article>
+                    <article class="adv-item adv-desktop-only">
+                        <div class="adv-heading">
+                            <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+                            <span>Экспертиза без посредников</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </article>
+                    <article class="adv-item">
+                        <div class="adv-heading">
+                            <span class="material-symbols-outlined" aria-hidden="true">account_balance</span>
+                            <span>Судебная практика</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </article>
+                    <article class="adv-item">
+                        <div class="adv-heading">
+                            <span class="material-symbols-outlined" aria-hidden="true">language</span>
+                            <span>Работа по всей России</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </article>
+                    <article class="adv-item">
+                        <div class="adv-heading">
+                            <span class="material-symbols-outlined" aria-hidden="true">memory</span>
+                            <span>Современные методики</span>
+                        </div>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для нас самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                    </article>
                 </div>
             </section>
 
@@ -190,36 +292,36 @@
                 </ol>
             </section>
 
-            <section class="section section-light" id="objects">
+            <section class="section section-surface" id="objects">
                 <h2>Виды экспертиз по объектам исследований</h2>
                 <div class="object-grid">
                     <article class="object-card">
-                        <i class="fa-solid fa-desktop"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">desktop_windows</span>
                         <h3>Компьютерно-техническая экспертиза</h3>
                         <p>Исследования компьютеров, ноутбуков, рабочих станций и цифровых следов пользователя.</p>
                     </article>
                     <article class="object-card">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">desktop_windows</span>
                         <h3>Телефоны и мобильные устройства</h3>
                         <p>Исследования смартфонов, планшетов, мобильных приложений, файлов и следов использования устройства.</p>
                     </article>
                     <article class="object-card">
-                        <i class="fa-regular fa-hard-drive"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">hard_drive</span>
                         <h3>Экспертиза HDD и SSD</h3>
                         <p>Анализ состояния носителя, структуры разделов, файловой системы и следов операции с данными.</p>
                     </article>
                     <article class="object-card">
-                        <i class="fa-regular fa-message"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">forum</span>
                         <h3>Экспертиза переписки</h3>
                         <p>Исследование сообщений в мессенджерах, социальных сетях, корпоративных чатах и экспортированных диалогах.</p>
                     </article>
                     <article class="object-card">
-                        <i class="fa-regular fa-envelope"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">mail</span>
                         <h3>Экспертиза электронной почты</h3>
                         <p>Исследование почтовых сообщений, заголовков, вложений, маршрута доставки и технических следов письма.</p>
                     </article>
                     <article class="object-card">
-                        <i class="fa-solid fa-cloud"></i>
+                        <span class="material-symbols-outlined object-icon" aria-hidden="true">cloud</span>
                         <h3>Экспертиза облачного хранилища</h3>
                         <p>Исследование структуры хранения данных, каталогов, разделов, сигнатур и свойств файлов.</p>
                     </article>
@@ -229,43 +331,43 @@
                 </div>
             </section>
 
-            <section class="section section-surface" id="cases">
+            <section class="section section-light" id="cases">
                 <h2>Примеры экспертиз</h2>
                 <div class="case-grid">
                     <article class="case-card">
-                        <h3>Экспертиза сайта по ТЗ</h3>
-                        <p>Проведена проверка сайта на соответствие техническому заданию: структура, функциональные модули, роли пользователей, формы, интеграции и требования к доступам. Подготовлено заключение с поэлементной таблицей соответствия.</p>
+                        <h3>Пример экспертизы № 1</h3>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         <div class="meta-row"><span>Год исследования</span><span>2023 г.</span></div>
-                        <div class="meta-row"><span>Категория</span><span>Экспертиза сайта</span></div>
+                        <div class="meta-row"><span>Категория</span><span>Компьютерно-техническая</span></div>
                         <div class="meta-row"><span>Статус</span><span>Принято судом</span></div>
                     </article>
                     <article class="case-card">
-                        <h3>Спор по исходному коду</h3>
-                        <p>Сравнительный анализ двух версий репозитория показал прямое заимствование модулей, совпадение структуры и ключевых функций, включая историю коммитов и авторские правки.</p>
+                        <h3>Пример экспертизы № 2</h3>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         <div class="meta-row"><span>Год исследования</span><span>2024 г.</span></div>
-                        <div class="meta-row"><span>Категория</span><span>Экспертиза ПО</span></div>
-                        <div class="meta-row"><span>Статус</span><span>Использовано в суде</span></div>
+                        <div class="meta-row"><span>Категория</span><span>Компьютерно-техническая</span></div>
+                        <div class="meta-row"><span>Статус</span><span>Принято судом</span></div>
                     </article>
                     <article class="case-card">
-                        <h3>Фиксация сайта для арбитража</h3>
-                        <p>Зафиксировано содержимое сайта и личного кабинета: страницы, метаданные, путь навигации и временные отметки. Подготовлен комплект для процессуального представления.</p>
-                        <div class="meta-row"><span>Год исследования</span><span>2024 г.</span></div>
-                        <div class="meta-row"><span>Категория</span><span>Экспертиза сайта</span></div>
-                        <div class="meta-row"><span>Статус</span><span>Приобщено к делу</span></div>
-                    </article>
-                    <article class="case-card">
-                        <h3>Подмена финансовых файлов</h3>
-                        <p>По метаданным и журналам ОС установлено редактирование отчетных документов после даты их официальной отправки. Выявлена цепочка изменений и учетная запись пользователя.</p>
+                        <h3>Пример экспертизы № 3</h3>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         <div class="meta-row"><span>Год исследования</span><span>2025 г.</span></div>
-                        <div class="meta-row"><span>Категория</span><span>Метаданные файлов</span></div>
+                        <div class="meta-row"><span>Категория</span><span>Компьютерно-техническая</span></div>
                         <div class="meta-row"><span>Статус</span><span>Принято судом</span></div>
                     </article>
                     <article class="case-card">
-                        <h3>Несанкционированный доступ к БД</h3>
-                        <p>Проанализированы серверные логи и дампы базы данных: подтверждены внешние подключения, время выгрузки таблиц и признаки экспорта персональных данных.</p>
+                        <h3>Пример экспертизы № 4</h3>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                        <div class="meta-row"><span>Год исследования</span><span>2025 г.</span></div>
+                        <div class="meta-row"><span>Категория</span><span>Компьютерно-техническая</span></div>
+                        <div class="meta-row"><span>Статус</span><span>Принято судом</span></div>
+                    </article>
+                    <article class="case-card">
+                        <h3>Пример экспертизы № 5</h3>
+                        <p>Каждый из нас понимает очевидную вещь: существующая теория предоставляет широкие возможности для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         <div class="meta-row"><span>Год исследования</span><span>2026 г.</span></div>
-                        <div class="meta-row"><span>Категория</span><span>Экспертиза БД</span></div>
-                        <div class="meta-row"><span>Статус</span><span>Досудебное урегулирование</span></div>
+                        <div class="meta-row"><span>Категория</span><span>Компьютерно-техническая</span></div>
+                        <div class="meta-row"><span>Статус</span><span>Принято судом</span></div>
                     </article>
                 </div>
             </section>
@@ -273,38 +375,53 @@
             <section class="section section-light" id="faq">
                 <h2>Вопросы и ответы</h2>
                 <div class="faq-item open">
-                    <button class="faq-question" type="button">Будет ли заключение принято судом?<i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="faq-question" type="button">
+                        <span>Будет ли заключение принято судом?</span>
+                        <span class="material-symbols-outlined faq-toggle-icon" data-faq-icon aria-hidden="true">keyboard_arrow_up</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Да, при надлежащем оформлении заключение может быть принято судом как доказательство. Экспертное исследование выполняется в соответствии с Федеральным законом № 73-ФЗ «О государственной судебно-экспертной деятельности в Российской Федерации» от 31 мая 2001 года, с соблюдением требований к компетенции эксперта, методике, полноте исследования и обоснованности выводов. Окончательную оценку относимости, допустимости и достоверности заключения в каждом конкретном деле дает суд.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">Можно ли провести экспертизу дистанционно?<i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="faq-question" type="button">
+                        <span>Можно ли провести экспертизу дистанционно?</span>
+                        <span class="material-symbols-outlined faq-toggle-icon" data-faq-icon aria-hidden="true">keyboard_arrow_down</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Да, по ряду задач возможно удаленное исследование при передаче образов, архивов и материалов в защищенном виде.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">Сколько времени занимает проведение экспертизы?<i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="faq-question" type="button">
+                        <span>Сколько времени занимает проведение экспертизы?</span>
+                        <span class="material-symbols-outlined faq-toggle-icon" data-faq-icon aria-hidden="true">keyboard_arrow_down</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Срок зависит от объема материалов, обычно от 5 рабочих дней. Точные сроки определяются после предварительного анализа.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">Чем отличается досудебное и судебное заключение?<i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="faq-question" type="button">
+                        <span>Чем отличается досудебное и судебное заключение?</span>
+                        <span class="material-symbols-outlined faq-toggle-icon" data-faq-icon aria-hidden="true">keyboard_arrow_down</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Досудебное заключение готовится по инициативе стороны спора и используется для переговоров, претензий и подготовки позиции. Судебное заключение выполняется по определению суда в рамках процесса и приобщается к материалам дела в установленном процессуальном порядке.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button">Что нужно для проведения экспертизы?<i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="faq-question" type="button">
+                        <span>Что нужно для проведения экспертизы?</span>
+                        <span class="material-symbols-outlined faq-toggle-icon" data-faq-icon aria-hidden="true">keyboard_arrow_down</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Нужны материалы дела, перечень вопросов и контакт для уточнений. По итогам первичного анализа согласуем план работы.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="section section-surface" id="contacts">
+            <section class="section section-light" id="contacts">
                 <div class="contact-card">
                     <h2>Остались вопросы?</h2>
                     <p>Отправьте Ваш запрос и получите бесплатную консультацию от эксперта</p>
@@ -340,48 +457,53 @@
         <footer class="site-footer" id="contacts-footer">
             <h2>Экспертная практика<br>Стрелкова</h2>
 
-            <div class="footer-contacts">
-                <h3>Контакты</h3>
-                <div class="contact-line"><i class="fa-solid fa-phone"></i><a href="tel:+79266100903">+7 (926) 610-09-03</a></div>
-                <div class="contact-line"><i class="fa-regular fa-envelope"></i><a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a></div>
-                <p class="footer-text">Режим работы: пн-пт, с 12:00 до 20:00</p>
-            </div>
+            <div class="footer-grid">
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <div class="contact-line phone"><span class="material-symbols-outlined" aria-hidden="true">call</span><a href="tel:+79266100903">+7 (926) 610-09-03</a></div>
+                    <div class="contact-line email"><span class="material-symbols-outlined" aria-hidden="true">mail</span><a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы.">rstrelkov@inbox.ru</a></div>
+                    <p class="footer-text">Режим работы: с понедельника по пятницу с 12:00 до 20:00</p>
+                </div>
 
-            <div class="messengers">
-                <a href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-                <a href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>Telegram</a>
-                <a href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX"><i class="fa-solid fa-circle-dot"></i>MAX</a>
-            </div>
+                <div class="messengers">
+                    <a class="messenger-link messenger-whatsapp" href="https://wa.me/79266100903" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+                    <a class="messenger-link messenger-telegram" href="https://t.me/IT_Expert_strexpit" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram" aria-hidden="true"></i><span>Telegram</span></a>
+                    <a class="messenger-link messenger-max" href="https://max.ru/u/f9LHodD0cOIEwTlNK13ezDxwfjsOn_5qimRnN7kEzPiVlsR6RnP13qNudW8" target="_blank" rel="noopener noreferrer" aria-label="MAX"><i class="bi bi-chat-fill" aria-hidden="true"></i><span>MAX</span></a>
+                </div>
 
-            <div class="footer-menu">
-                <h3>Меню</h3>
-                <a href="#research-types">Виды документов</a>
-                <a href="prices.html">Стоимость</a>
-                <a href="#help-conclusion">Помощь заключения</a>
-                <a href="#about">Об эксперте</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#stages">Этапы исследования</a>
-                <a href="#objects">Объекты исследований</a>
-                <a href="#cases">Примеры экспертиз</a>
-                <a href="#faq">Вопросы и ответы</a>
-                <a href="#contacts-footer">Контакты</a>
+                <div class="footer-menu">
+                    <h3>Меню</h3>
+                    <a href="#research-types">Заключения</a>
+                    <a href="#about">Эксперт</a>
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#stages">Этапы</a>
+                    <a href="#objects">Объекты</a>
+                    <a href="#cases">Примеры</a>
+                    <a href="prices.html">Стоимость</a>
+                    <a href="#faq">Вопросы и ответы</a>
+                    <a href="#contacts-footer">Контакты</a>
+                </div>
             </div>
 
             <hr class="footer-rule">
-            <p class="footer-legal">© 2024-2026 г. <a href="privacy.html">Политика конфиденциальности</a></p>
-            <p class="footer-legal">ИП Стрелков Родион Александрович<br>ИНН 091706875564<br>ОГРНИП 325010000032740</p>
+            <div class="footer-legal-row">
+                <p class="footer-legal">© 2024-2026 г. <a href="privacy.html">Политика конфиденциальности</a></p>
+                <p class="footer-legal footer-legal-company">ИП Стрелков Родион Александрович ИНН 091706875564 ОГРНИП 325010000032740</p>
+            </div>
         </footer>
     </div>
 
     <div class="floating-actions" aria-label="Быстрые действия">
-        <a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы." data-mail-fallback="#contacts-footer" aria-label="Написать на почту"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#contacts" aria-label="Открыть форму"><i class="fa-regular fa-message"></i></a>
+        <a href="mailto:rstrelkov@inbox.ru?subject=Запрос%20на%20консультацию&body=Здравствуйте.%20Прошу%20связаться%20со%20мной%20по%20вопросу%20экспертизы." data-mail-fallback="#contacts-footer" aria-label="Написать на почту"><span class="material-symbols-outlined" aria-hidden="true">mail</span></a>
+        <a href="#contacts" aria-label="Открыть форму"><span class="material-symbols-outlined" aria-hidden="true">chat</span></a>
     </div>
     <button class="scroll-top-btn" type="button" data-scroll-top aria-label="Наверх">
-        <i class="fa-solid fa-arrow-up"></i>
+        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
     </button>
 
     <script src="js/site.js"></script>
 </body>
 </html>
+
+
 

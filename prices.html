@@ -13,26 +13,38 @@
     <link rel="stylesheet" href="css/site.css">
 
     <style>
+        #prices-section h2 {
+            font-family: var(--font-title);
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 500;
+            color: #0F172A;
+            margin: 0 0 18px;
+        }
+
         .prices-hero-note {
-            margin: 14px 0 0;
-            max-width: 860px;
+            margin: 0 0 8px;
+            font-family: var(--font-title);
+            font-size: 14px;
+            line-height: 1.55;
+            font-weight: 400;
             color: #475569;
         }
 
         .price-block {
-            margin-top: 24px;
-            padding: 28px;
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+            margin-top: 28px;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .price-title {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .price-title i {
@@ -42,109 +54,161 @@
             width: 42px;
             height: 42px;
             border-radius: 14px;
-            background: #f1f5f9;
-            color: #0f172a;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            color: #0F172A;
             font-size: 20px;
+            line-height: 1;
             flex-shrink: 0;
         }
 
         .price-title h3 {
             margin: 0;
+            font-family: var(--font-title);
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 600;
+            color: #0F172A;
         }
 
-        .price-block p {
-            margin: 0 0 18px;
-            color: #475569;
+        .price-block > p {
+            margin: 0 0 14px;
+            font-family: var(--font-title);
+            font-size: 14px;
+            line-height: 1.55;
+            font-weight: 400;
+            color: #0F172A;
         }
 
         .prices-table {
             width: 100%;
             border-collapse: collapse;
-            overflow: hidden;
-            border-radius: 18px;
-            background: #fff;
+            border-radius: 0;
+            background: transparent;
+            overflow: visible;
+            display: table;
         }
 
         .prices-table thead th {
             text-align: left;
+            font-family: var(--font-title);
             font-weight: 600;
-            color: #0f172a;
-            background: #f8fafc;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 16px 18px;
-            font-size: 15px;
+            color: #0F172A;
+            background: transparent;
+            border-bottom: 1px solid #cbd5e1;
+            padding: 12px 0;
+            font-size: 14px;
+            line-height: 1.4;
+            vertical-align: top;
         }
 
         .prices-table tbody td {
-            padding: 16px 18px;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 0;
+            border-bottom: 1px solid #cbd5e1;
             vertical-align: top;
-            color: #0f172a;
-            font-size: 15px;
+            color: #0F172A;
+            font-family: var(--font-title);
+            font-size: 14px;
             line-height: 1.5;
+            font-weight: 400;
         }
 
         .prices-table tbody tr:last-child td {
-            border-bottom: none;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .prices-table th:nth-child(1),
+        .prices-table td:nth-child(1) {
+            padding-right: 12px;
+        }
+
+        .prices-table th:nth-child(2),
+        .prices-table td:nth-child(2) {
+            white-space: nowrap;
+            text-align: left;
+            padding-right: 8px;
         }
 
         .price-cost,
         .price-term {
             white-space: nowrap;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         .individual-note {
             margin-top: 24px;
-            padding: 24px;
-            border-radius: 24px;
-            background: #0f172a;
-            color: #f8fafc;
+            padding: 18px;
+            border-radius: 16px;
+            background: #0F172A;
+            color: #F8FAFC;
         }
 
         .individual-note .note-head {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 8px;
         }
 
         .individual-note .note-head i {
-            font-size: 22px;
+            font-size: 20px;
+            color: #F8FAFC;
         }
 
         .individual-note h3 {
             margin: 0;
-            color: #fff;
+            font-family: var(--font-title);
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 600;
+            color: #F8FAFC;
         }
 
         .individual-note p {
             margin: 0;
-            color: rgba(248, 250, 252, 0.92);
+            font-family: var(--font-title);
+            font-size: 14px;
+            line-height: 1.55;
+            font-weight: 400;
+            color: #F8FAFC;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 767.98px) {
+            .prices-table th:nth-child(3),
+            .prices-table td:nth-child(3) {
+                display: none;
+            }
+
+            .prices-table th:nth-child(1),
+            .prices-table td:nth-child(1) {
+                width: 64%;
+                padding-right: 10px;
+            }
+
+            .prices-table th:nth-child(2),
+            .prices-table td:nth-child(2) {
+                width: 36%;
+                white-space: nowrap;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #prices-section h2 {
+                font-size: 32px;
+            }
+
             .price-block {
-                padding: 20px;
-                border-radius: 20px;
+                margin-top: 36px;
             }
 
-            .prices-table {
-                display: block;
-                overflow-x: auto;
+            .prices-table thead th {
+                font-size: 15px;
+                padding: 14px 0;
             }
 
-            .prices-table thead th,
             .prices-table tbody td {
-                padding: 14px 14px;
-                font-size: 14px;
-            }
-
-            .price-title i {
-                width: 38px;
-                height: 38px;
-                border-radius: 12px;
-                font-size: 18px;
+                padding: 16px 0;
+                font-size: 15px;
             }
         }
     </style>
@@ -156,16 +220,17 @@
             <button class="icon-btn" id="closeMenu" type="button" aria-label="Закрыть меню">
                 <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
-            <div class="drawer-title">Экспертная практика<br>Стрелков</div>
+            <div class="drawer-title">Стрелков&nbsp;|&nbsp;Экспертная практика</div>
         </div>
         <nav class="drawer-nav">
-            <a href="index.html#research-types">Заключения</a>
-            <a href="index.html#about">Эксперт</a>
-            <a href="index.html#advantages">Преимущества</a>
-            <a href="index.html#stages">Этапы</a>
-            <a href="index.html#objects">Объекты</a>
-            <a href="index.html#cases">Примеры</a>
+            <a href="index.html#research-types">Виды исследований</a>
             <a href="prices.html">Стоимость</a>
+            <a href="index.html#help-conclusion">Помощь заключения</a>
+            <a href="index.html#about">Об эксперте</a>
+            <a href="index.html#advantages">Преимущества</a>
+            <a href="index.html#stages">Этапы исследования</a>
+            <a href="index.html#objects">Объекты исследований</a>
+            <a href="index.html#cases">Примеры экспертиз</a>
             <a href="index.html#faq">Вопросы и ответы</a>
             <a href="#contacts-footer">Контакты</a>
         </nav>
@@ -178,9 +243,12 @@
             </button>
 
             <a href="index.html" class="brand" aria-label="Перейти на главную страницу">
-    <span class="brand-mobile">Экспертная практика<br>Стрелков</span>
-    <span class="brand-desktop">Экспертная практика<br>Стрелков</span>
-</a>
+                <span class="brand-mobile">Стрелков&nbsp;|&nbsp;Экспертная практика</span>
+                <span class="brand-desktop">
+                    <span class="brand-desktop-top">Экспертная практика</span>
+                    <span class="brand-desktop-bottom">Стрелков</span>
+                </span>
+            </a>
 
             <nav class="topbar-nav" aria-label="Основная навигация">
                 <a href="index.html#research-types">Заключения</a>
@@ -216,7 +284,7 @@
 
     <div class="site-shell">
         <main>
-            <section class="section section-surface">
+            <section class="section section-light" id="prices-section">
                 <h2>Стоимость исследований</h2>
                 <p class="prices-hero-note">
                     Ниже приведены ориентировочные виды исследований, базовая стоимость и минимальные сроки проведения.

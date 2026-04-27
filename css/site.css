@@ -70,12 +70,12 @@ a {
     max-width: 1280px;
     min-height: 56px;
     margin: 0 auto;
-    padding: 0 14px;
+    padding: 0 16px;
     position: relative;
     display: grid;
     grid-template-columns: 32px minmax(0, 1fr) 24px;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 12px;
 }
 
 .icon-btn {
@@ -123,11 +123,13 @@ a {
     display: block;
     width: 100%;
     font-family: var(--font-ui);
-    font-size: 13px;
-    line-height: 1.15;
-    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
     color: var(--text);
-    white-space: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .brand-desktop {
@@ -152,7 +154,12 @@ a {
 
 @media (max-width: 380px) {
     .brand-mobile {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .topbar-inner {
+        padding: 0 12px;
+        column-gap: 8px;
     }
 }
 
@@ -167,36 +174,21 @@ a {
     grid-column: 3;
 }
 
-.topbar-social.social-whatsapp {
-    background: transparent;
-    border-color: #0f172a;
-    color: #0f172a;
-}
-
-.topbar-social i {
-    display: block;
-    font-size: 14px;
-    line-height: 1;
-}
-
-.topbar-social.social-whatsapp i {
-    font-size: 14px;
-}
-
-.topbar-social.social-telegram,
-.topbar-social.social-max {
+.topbar-social {
     background: #0f172a;
     border-color: #0f172a;
     color: #ffffff;
 }
 
-.topbar-social.social-telegram i {
+.topbar-social i {
+    display: block;
     font-size: 13px;
-    transform: translateX(1px);
+    line-height: 1;
+    color: #ffffff;
 }
 
-.topbar-social.social-max i {
-    font-size: 12px;
+.topbar-social.social-telegram i {
+    transform: translateX(1px);
 }
 
 main {
@@ -887,9 +879,12 @@ main {
 .drawer-title {
     font-family: var(--font-ui);
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 1.2;
     font-weight: 500;
     color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .drawer-nav {
@@ -1064,36 +1059,21 @@ body.menu-open .drawer-backdrop {
 }
 
 .messenger-link i {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    border: 1px solid #f8fafc;
+    background: #475569;
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1;
 }
 
-.messenger-whatsapp i {
-    background: transparent;
-    color: #f8fafc;
-}
-
-.messenger-telegram i,
-.messenger-max i {
-    background: #f8fafc;
-    color: #0f172a;
-}
-
 .messenger-telegram i {
-    font-size: 11px;
     transform: translateX(1px);
-}
-
-.messenger-max i {
-    font-size: 10px;
 }
 
 .footer-menu a {

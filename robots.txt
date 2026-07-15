@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Host: kodexpert.ru
+Sitemap: https://kodexpert.ru/sitemap.xml
